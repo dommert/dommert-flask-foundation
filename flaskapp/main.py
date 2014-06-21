@@ -12,5 +12,10 @@ def hello_world(title='Hello World'):
 def about(title='About Page'):
     return render_template('foundation/onecol.html', title=title)
 
+    @app.route('/<path:path>')
+def catch_all(title='Catch All' , content='Catch All URL'):
+        return render_template('foundation/onecol.html', title=title)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
